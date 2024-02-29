@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+body  { 
+    margin-top: -8px;
+    margin-left: -8px;
+    overflow-x: hidden;
+}
+header > h1{ 
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -300px;
+    width: 60%;
+    margin-left: 5vw;
+    border-left: 5px solid #ee1d5f;
+}
+
+header > img {
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    opacity: 0.6;
+}
+
+header > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    z-index: 1;
+    margin-top: -200px;
+    margin-left: 5.4vw;
+}
+
+header > a {
+    border-radius: 40px;
+    background-color: #ee1d5f;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    margin-top: -200px;
+    position: absolute;
+    z-index: 1000;
+    margin-top: 320px;
+    margin-left: -92vw;
+    text-decoration:none
+}
+
+article{
+    margin-top: 1px;
+    display: block;
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+    height: 300px;
+}
+
+article > div {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ee1d5f;
+    text-align: center;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+
+    border-width: 1px;
+    margin-top: 50px;
+    border-style: solid;
+    outline-width: 5px;
+    outline-style: solid;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+article> .article{
+    background-image: url(imagens/caixa1.jpg);
+}
+
+article > .article> h1 {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    text-shadow: 0 0 50px #eb0850;
+    
+    
+}
+article > div > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+   
+   text-align: center;
+   color: white;
+   margin-top: -25px;
+}
+
+article > div > h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+section > .fundo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ee1d5f;
+    text-align: center;
+    display: inline-block;
+    width: 100vw;
+    height: 500px; 
+    background-image: url(imagens/imagemdefundo2.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+   
+
+section > .fundo > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-left: 50vw;
+   
+ 
+
+   
+    
+}
+section > .fundo > .star{
+    color: #eb0850;
+    margin-top: 100px;
+
+}
+
+section > .fundo > h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 50vw;
+  
+   
+   
+}
+.prerodape {
+    display: block;
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(37, 37, 37);
+}
+.prerodape > div > h2{
+    color: white;
+}
+
+
+
+
+
