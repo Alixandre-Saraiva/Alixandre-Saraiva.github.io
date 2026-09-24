@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Paleta da marca (referência: protótipo do app) */
+@theme {
+  --color-primary-50: #e8f7f8;
+  --color-primary-100: #c6ecee;
+  --color-primary-200: #93dade;
+  --color-primary-300: #57c2c9;
+  --color-primary-400: #25aeb7;
+  --color-primary: #0f9da8;
+  --color-primary-600: #0c828b;
+  --color-primary-700: #0b6970;
+  --color-primary-800: #0c5359;
+  --color-primary-900: #0b3f44;
+
+  --color-accent-100: #fdf3d3;
+  --color-accent-300: #f8db85;
+  --color-accent: #f4c542;
+  --color-accent-600: #d9a91e;
+  --color-accent-700: #a87f10;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 1px 2px rgb(15 60 65 / 0.04), 0 8px 24px -8px rgb(15 60 65 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(15 60 65 / 0.06), 0 16px 40px -12px rgb(15 60 65 / 0.22);
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  @keyframes shimmer {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
+  }
+}
+
+/* Tokens semânticos que mudam com o tema */
+:root {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-2: #eef3f3;
+  --ink: #222222;
+  --muted: #6b7475;
+  --line: #e3e8e8;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0b1517;
+  --surface: #122125;
+  --surface-2: #1a2d32;
+  --ink: #e9f1f2;
+  --muted: #93a6a9;
+  --line: #22393e;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: #222;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+/* Leaflet */
+.leaflet-container {
+  font-family: var(--font-sans);
+  border-radius: var(--radius-card);
+}
+
+/* Splash só na primeira visita da sessão (ver themeScript) */
+html[data-splash="off"] .splash {
+  display: none;
+}
